@@ -1,0 +1,46 @@
+Jul 02 13:16:47.801 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jul 02 13:16:47.801 HYPERVISOR: Started on IP = localhost, TCP port = 53033.
+Jul 02 13:16:48.288 HYPERVISOR: exec_cmd: hypervisor version 
+Jul 02 13:16:48.288 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips 
+Jul 02 13:16:48.289 GENERAL: working_dir=C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips
+Jul 02 13:16:48.289 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips\a2e735dd-e79b-4271-924a-2c72353c276f 
+Jul 02 13:16:48.290 GENERAL: working_dir=C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips\a2e735dd-e79b-4271-924a-2c72353c276f
+Jul 02 13:16:48.291 HYPERVISOR: exec_cmd: vm create R5 5 c3725 
+Jul 02 13:16:48.293 VM: VM R5 created.
+Jul 02 13:16:48.294 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5006 
+Jul 02 13:16:48.294 HYPERVISOR: exec_cmd: c3725 get_mac_addr R5 
+Jul 02 13:16:48.295 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+Jul 02 13:16:48.295 HYPERVISOR: exec_cmd: vm set_exec_area R5 64 
+Jul 02 13:16:48.296 HYPERVISOR: exec_cmd: vm set_ios R5 C:/Users/hp/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Jul 02 13:16:48.297 HYPERVISOR: exec_cmd: c3725 set_mac_addr R5 c205.2d14.0000 
+Jul 02 13:16:48.297 HYPERVISOR: exec_cmd: vm set_nvram R5 256 
+Jul 02 13:16:53.382 HYPERVISOR: exec_cmd: nio create_udp udp-fcb1107a-3dec-4cc6-b8d7-8829df717fe6 10022 127.0.0.1 10023 
+Jul 02 13:16:53.636 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-fcb1107a-3dec-4cc6-b8d7-8829df717fe6 
+Jul 02 13:16:53.652 HYPERVISOR: exec_cmd: vm get_status R5 
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Jul 02 13:18:04.061 VM: VM Ghost created.
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/hp/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost 'C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips\c3725-adventerprisek9-mz124-15.image-128.ghost' 
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jul 02 13:18:04.077 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Jul 02 13:18:04.096 HYPERVISOR: exec_cmd: vm start Ghost 
+Jul 02 13:18:04.473 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Jul 02 13:18:04.546 VM: VM Ghost shutdown.
+Jul 02 13:18:04.546 VM: VM Ghost destroyed.
+Jul 02 13:18:04.562 HYPERVISOR: exec_cmd: vm get_status R5 
+Jul 02 13:18:04.562 HYPERVISOR: exec_cmd: vm set_config R5 configs\i5_startup-config.cfg 
+Jul 02 13:18:04.577 HYPERVISOR: exec_cmd: vm start R5 
+Jul 02 13:18:36.125 HYPERVISOR: exec_cmd: vm extract_config R5 
+Jul 02 13:18:36.843 HYPERVISOR: exec_cmd: vm extract_config R5 
+Jul 02 13:36:22.131 HYPERVISOR: exec_cmd: vm get_status R5 
+Jul 02 13:36:22.133 HYPERVISOR: exec_cmd: vm stop R5 
+Jul 02 13:36:22.436 VM: VM R5 shutdown.
+Jul 02 13:36:22.452 HYPERVISOR: exec_cmd: vm extract_config R5 
+Jul 02 13:36:23.982 HYPERVISOR: exec_cmd: vm get_status R5 
+Jul 02 13:36:23.984 HYPERVISOR: exec_cmd: vm extract_config R5 
+Jul 02 13:36:23.997 HYPERVISOR: exec_cmd: vm delete R5 
+Jul 02 13:36:23.997 VM: VM R5 destroyed.
+Jul 02 13:36:25.926 HYPERVISOR: exec_cmd: hypervisor stop 
+Jul 02 13:36:26.187 HYPERVISOR: Stopped.
+Jul 02 13:36:26.281 GENERAL: reset done.

@@ -1,0 +1,51 @@
+Jul 02 13:16:48.385 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jul 02 13:16:48.385 HYPERVISOR: Started on IP = localhost, TCP port = 53036.
+Jul 02 13:16:48.880 HYPERVISOR: exec_cmd: hypervisor version 
+Jul 02 13:16:48.882 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips 
+Jul 02 13:16:48.884 GENERAL: working_dir=C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips
+Jul 02 13:16:48.888 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips\63471e11-3ccf-47b0-9df5-f0fd3e217e5c 
+Jul 02 13:16:48.889 GENERAL: working_dir=C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips\63471e11-3ccf-47b0-9df5-f0fd3e217e5c
+Jul 02 13:16:48.892 HYPERVISOR: exec_cmd: vm create R1 1 c3725 
+Jul 02 13:16:48.922 VM: VM R1 created.
+Jul 02 13:16:48.925 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5007 
+Jul 02 13:16:48.925 HYPERVISOR: exec_cmd: c3725 get_mac_addr R1 
+Jul 02 13:16:48.927 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Jul 02 13:16:48.928 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Jul 02 13:16:48.932 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/hp/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Jul 02 13:16:48.934 HYPERVISOR: exec_cmd: c3725 set_mac_addr R1 c201.0e1c.0000 
+Jul 02 13:16:48.935 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Jul 02 13:16:50.260 HYPERVISOR: exec_cmd: nio create_udp udp-a631f7f6-2648-405a-a513-f676024d8a7d 10002 127.0.0.1 10003 
+Jul 02 13:16:52.132 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-a631f7f6-2648-405a-a513-f676024d8a7d 
+Jul 02 13:16:52.132 HYPERVISOR: exec_cmd: vm get_status R1 
+Jul 02 13:16:53.279 HYPERVISOR: exec_cmd: nio create_udp udp-463e85f7-f5a1-4aba-81f3-ee6c813a2741 10016 127.0.0.1 10017 
+Jul 02 13:16:53.304 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-463e85f7-f5a1-4aba-81f3-ee6c813a2741 
+Jul 02 13:16:53.304 HYPERVISOR: exec_cmd: vm get_status R1 
+Jul 02 13:18:03.561 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Jul 02 13:18:03.566 VM: VM Ghost created.
+Jul 02 13:18:03.569 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/hp/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Jul 02 13:18:03.571 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Jul 02 13:18:03.573 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost 'C:\Users\hp\Desktop\MPLS_demo\project-files\dynamips\c3725-adventerprisek9-mz124-15.image-128.ghost' 
+Jul 02 13:18:03.574 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jul 02 13:18:03.576 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Jul 02 13:18:03.577 HYPERVISOR: exec_cmd: vm start Ghost 
+Jul 02 13:18:03.919 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Jul 02 13:18:04.030 VM: VM Ghost shutdown.
+Jul 02 13:18:04.030 VM: VM Ghost destroyed.
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm get_status R1 
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg 
+Jul 02 13:18:04.061 HYPERVISOR: exec_cmd: vm start R1 
+Jul 02 13:18:34.762 HYPERVISOR: exec_cmd: vm extract_config R1 
+Jul 02 13:18:36.127 HYPERVISOR: exec_cmd: vm extract_config R1 
+Jul 02 13:36:05.476 HYPERVISOR: exec_cmd: vm extract_config R1 
+Jul 02 13:36:05.576 HYPERVISOR: exec_cmd: vm extract_config R1 
+Jul 02 13:36:22.132 HYPERVISOR: exec_cmd: vm get_status R1 
+Jul 02 13:36:22.133 HYPERVISOR: exec_cmd: vm stop R1 
+Jul 02 13:36:22.407 VM: VM R1 shutdown.
+Jul 02 13:36:22.409 HYPERVISOR: exec_cmd: vm extract_config R1 
+Jul 02 13:36:24.005 HYPERVISOR: exec_cmd: vm get_status R1 
+Jul 02 13:36:24.006 HYPERVISOR: exec_cmd: vm extract_config R1 
+Jul 02 13:36:24.010 HYPERVISOR: exec_cmd: vm delete R1 
+Jul 02 13:36:24.010 VM: VM R1 destroyed.
+Jul 02 13:36:25.942 HYPERVISOR: exec_cmd: hypervisor stop 
+Jul 02 13:36:26.412 HYPERVISOR: Stopped.
+Jul 02 13:36:26.412 GENERAL: reset done.
